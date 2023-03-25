@@ -48,3 +48,10 @@ function redirect(shortUrl) {
 		);
 	}
 }
+const longUrl = "https://app.slack.com/client/T03DU70TCTY/C03EDF7QEJV";
+
+const shortUrl = shortenUrl(longUrl);
+console.log(shortUrl);
+
+redirect(shortUrl);
+
