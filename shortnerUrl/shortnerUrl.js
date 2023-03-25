@@ -9,13 +9,6 @@ function validateUrl(value) {
 
 	return !!urlPattern.test(value);
 }
-function getrandom() {
-	var random_string =
-		Math.random().toString(32).substring(2, 5) +
-		Math.random().toString(32).substring(2, 5);
-	return "https://" + random_string + ".com";
-}
-
 const handleUrlShorten = (url) => {
 	let finalUrl = {};
 
@@ -55,9 +48,3 @@ function redirect(shortUrl) {
 		);
 	}
 }
-const longUrl = "https://app.slack.com/client/T03DU70TCTY/C03EDF7QEJV";
-
-const shortUrl = shortenUrl(longUrl);
-console.log(shortUrl);
-
-redirect(shortUrl);
