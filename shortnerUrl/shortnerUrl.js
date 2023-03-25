@@ -1,7 +1,6 @@
 const originalUrls = [];
 const shortUrls = [];
 
-
 function validateUrl(value) {
 	var urlPattern = new RegExp(
 		"^(https?:\\/\\/)?" + "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|)"
@@ -9,6 +8,14 @@ function validateUrl(value) {
 
 	return !!urlPattern.test(value);
 }
+
+function getrandom() {
+	var random_string =
+		Math.random().toString(32).substring(2, 5) +
+		Math.random().toString(32).substring(2, 5);
+	return "https://" + random_string + ".com";
+}
+
 const handleUrlShorten = (url) => {
 	let finalUrl = {};
 
@@ -54,4 +61,3 @@ const shortUrl = shortenUrl(longUrl);
 console.log(shortUrl);
 
 redirect(shortUrl);
-
